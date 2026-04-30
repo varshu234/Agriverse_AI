@@ -1,0 +1,161 @@
+<!-- Skill Assessment Quiz Modal -->
+<div class="modal fade" id="skillQuizModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">
+                    <i class="fas fa-graduation-cap me-2"></i>
+                    Agriculture Knowledge Assessment
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" id="closeQuizBtn" style="display: none;"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Quiz Introduction -->
+                <div id="quizIntro" class="text-center py-4">
+                    <div class="mb-4">
+                        <i class="fas fa-seedling fa-4x text-success"></i>
+                    </div>
+                    <h4>Welcome to Your Personalized Learning Journey!</h4>
+                    <p class="text-muted">
+                        Take this quick 3-question quiz to assess your agriculture knowledge and get a personalized learning path tailored to your skill level.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card border-success">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-clock text-success fa-2x mb-2"></i>
+                                    <h6>Quick Assessment</h6>
+                                    <small class="text-muted">Only 3 questions</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-success">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-line text-success fa-2x mb-2"></i>
+                                    <h6>Personalized Path</h6>
+                                    <small class="text-muted">Tailored to your level</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-success">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-route text-success fa-2x mb-2"></i>
+                                    <h6>Clear Direction</h6>
+                                    <small class="text-muted">Know where to start</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success btn-lg mt-4" onclick="startSkillQuiz()">
+                        <i class="fas fa-play me-2"></i>Start Assessment
+                    </button>
+                </div>
+
+                <!-- Quiz Questions -->
+                <div id="quizQuestions" style="display: none;">
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" id="quizProgress" role="progressbar" style="width: 33%">Question 1 of 3</div>
+                    </div>
+                    
+                    <div id="questionContainer">
+                        <!-- Questions will be loaded here dynamically -->
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <button class="btn btn-outline-secondary" id="prevQuestionBtn" onclick="previousQuestion()" style="display: none;">
+                            <i class="fas fa-arrow-left me-2"></i>Previous
+                        </button>
+                        <button class="btn btn-success" id="nextQuestionBtn" onclick="nextQuestion()">
+                            Next<i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button class="btn btn-success" id="submitQuizBtn" onclick="submitSkillQuiz()" style="display: none;">
+                            <i class="fas fa-check me-2"></i>Complete Assessment
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results -->
+                <div id="quizResults" style="display: none;">
+                    <div class="text-center mb-4">
+                        <div id="resultIcon" class="mb-3"></div>
+                        <h4 id="resultTitle"></h4>
+                        <p id="resultDescription" class="text-muted"></p>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h5><i class="fas fa-lightbulb me-2"></i>Your Personalized Starting Point</h5>
+                        <p id="recommendationText" class="mb-0"></p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0"><i class="fas fa-book me-2"></i>Recommended Module</h6>
+                        </div>
+                        <div class="card-body" id="recommendedModule">
+                            <!-- Module details will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6><i class="fas fa-chart-bar me-2"></i>Your Assessment Results</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <div class="display-4 text-success" id="scoreDisplay"></div>
+                                    <small class="text-muted">Correct Answers</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <div class="display-4 text-info" id="skillLevelDisplay"></div>
+                                    <small class="text-muted">Skill Level</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6><i class="fas fa-list-check me-2"></i>Answer Review</h6>
+                        <div id="answerReview">
+                            <!-- Answer feedback will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <button class="btn btn-outline-secondary" onclick="retakeQuiz()">
+                            <i class="fas fa-redo me-2"></i>Retake Quiz
+                        </button>
+                        <button class="btn btn-success" onclick="closeSkillQuiz()">
+                            <i class="fas fa-check me-2"></i>Start Learning
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skill Path Display Section -->
+<div id="skillPathSection" class="mb-4" style="display: none;">
+    <div class="card border-success">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Your Personalized Learning Path
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h6 id="pathRecommendation"></h6>
+                    <p class="text-muted mb-0" id="pathDescription"></p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="badge bg-success fs-6" id="skillBadge"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

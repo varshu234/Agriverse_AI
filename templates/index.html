@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriverse AI - Smart Agriculture Investment Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-seedling me-2"></i>Agriverse AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light ms-2" href="/profile">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold text-white mb-4">
+                            Invest Smartly in Agriculture's Future
+                        </h1>
+                        <p class="lead text-white-50 mb-4">
+                            AI-powered platform helping corporates explore agriculture as an investment opportunity. 
+                            Get personalized recommendations, risk analysis, and sustainability insights.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="/profile" class="btn btn-primary btn-lg">
+                                <i class="fas fa-rocket me-2"></i>Start Investing
+                            </a>
+                            <a href="#features" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-play-circle me-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <i class="fas fa-chart-line display-1 text-white-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Why Choose Agriverse AI?</h2>
+                <p class="lead text-muted">Powerful features to guide your agriculture investment journey</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-robot fa-3x text-success"></i>
+                            </div>
+                            <h5 class="card-title">AI-Powered Insights</h5>
+                            <p class="card-text text-muted">
+                                Advanced algorithms analyze your profile to provide personalized investment recommendations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-chart-pie fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Risk Analysis</h5>
+                            <p class="card-text text-muted">
+                                Comprehensive risk assessment with mitigation strategies for informed decision-making.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-leaf fa-3x text-warning"></i>
+                            </div>
+                            <h5 class="card-title">Sustainability Focus</h5>
+                            <p class="card-text text-muted">
+                                Environmental and social impact analysis to align with ESG investment goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-calculator fa-3x text-info"></i>
+                            </div>
+                            <h5 class="card-title">Profit Simulation</h5>
+                            <p class="card-text text-muted">
+                                Advanced modeling to project returns under different market scenarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Categories -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Investment Opportunities</h2>
+                <p class="lead text-muted">Explore diverse agriculture investment categories</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-microchip fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Agri-Tech</h5>
+                            </div>
+                            <p class="card-text">
+                                Precision farming, IoT sensors, AI-driven crop monitoring, and agricultural robotics.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">High Growth</span>
+                                <small class="text-muted">22% CAGR</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-tractor fa-2x text-success"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Farming</h5>
+                            </div>
+                            <p class="card-text">
+                                Organic farming, vertical farming, sustainable livestock, and regenerative agriculture.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Stable</span>
+                                <small class="text-muted">15% CAGR</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-truck fa-2x text-info"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Supply Chain</h5>
+                            </div>
+                            <p class="card-text">
+                                Cold storage, logistics platforms, blockchain traceability, and distribution networks.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Moderate</span>
+                                <small class="text-muted">18% CAGR</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Transforming Agriculture Investment</h2>
+                    <p class="lead mb-4">
+                        Agriverse AI leverages cutting-edge technology to democratize access to agriculture investment opportunities. 
+                        Our platform analyzes market trends, risk factors, and sustainability metrics to provide data-driven recommendations.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>AI-Powered Analysis</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Risk Assessment</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>ESG Integration</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Market Insights</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/profile" class="btn btn-primary btn-lg">
+                        Get Started Today <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <i class="fas fa-globe-americas display-1 text-primary opacity-25"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-seedling me-2"></i>Agriverse AI</h5>
+                    <p class="text-muted">Smart agriculture investment platform for corporates</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">© 2024 Agriverse AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
